@@ -1,0 +1,16 @@
+compare:
+  - json_path: compare_train.json
+    image_root: /path_to_folder
+    sample: 500
+    random: true
+    
+
+deficiency:
+  - json_path: deficiency_train.json
+    image_root: /path_to_folder
+    random: true
+
+score:
+  - json_path: score_train.json
+    image_root: /path_to_folder
+    random: true
