@@ -4,28 +4,27 @@
 
 This section contains the training infrastructure for the PresAesth model, which is based on Qwen2.5-VL-7B-Instruct and fine-tuned for presentation aesthetics evaluation tasks.
 
-### Quick Start
-
 1. **Environment Setup**
    ```bash
    # install uv first
    # pip install uv
    cd train
-   ./setup.sh
+   bash ./setup.sh
    ```
 
 2. **Configure Environment Variables**
    ```bash
-   cp env-template .env
    # Edit .env file with your API keys and configuration (for evaluation and verification)
+   cp env-template .env
    ```
 
 3. **Start Training**
    ```bash
-   ./run.sh
+   source train_env/bin/activate
+   bash ./run.sh
    ```
 
-### Acknowledgement
+## Acknowledgement
 We appreciate the releasing codes and data of [open-r1](https://github.com/huggingface/open-r1), [open-r1-multimodal](https://github.com/EvolvingLMMs-Lab/open-r1-multimodal) and [SlideAudit](https://github.com/zhuohaouw/SlideAudit).
 
 ## Citation
