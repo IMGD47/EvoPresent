@@ -1,8 +1,8 @@
-# *Presenting a Paper is an Art*: Self Improvement Aesthetic Agents for Academic Presentations
+# *Presenting a Paper is an Art*: Self-Improvement Aesthetic Agents for Academic Presentations
 
 ## Training
 
-This section contains the training infrastructure for the PresAesth model, which is based on Qwen2.5-VL-7B-Instruct and fine-tuned for presentation aesthetics evaluation tasks.
+This section contains the training infrastructure for the **PresAesth** model, which is based on [Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) and fine-tuned for presentation aesthetics evaluation tasks.
 
 1. **Environment Setup**
    ```bash
