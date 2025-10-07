@@ -1,5 +1,8 @@
 # *Presenting a Paper is an Art*: Self-Improvement Aesthetic Agents for Academic Presentations
 
+[![arXiv](https://img.shields.io/badge/arXiv-paper-red.svg)](https://arxiv.org/abs/0000.00000)
+[![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://evopresent.github.io/)
+
 ## EvoPresent Agent Pipeline
 
 ![Pipeline](asset/pipeline.png)
