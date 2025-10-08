@@ -20,15 +20,9 @@ Overview of the EvoPresent framework. (a) EvoPresent first performs content extr
 
 ## 🧪 Demos
 
-### Demo 0
-- Interactive slides: [asset/demo0.html](asset/demo0.html)
+- [Demo 1 (video)](asset/demo0.mp4)
 
-<video src="asset/demo0.mp4" controls style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></video>
-
-### Demo 4
-- Interactive slides: [asset/demo4.html](asset/demo4.html)
-
-<video src="asset/demo4.mp4" controls style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></video>
+- [Demo 2 (video)](asset/demo4.mp4)
 
 ## 🏋️‍♂️ Training
 
