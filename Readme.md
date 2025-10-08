@@ -1,6 +1,6 @@
 # *Presenting a Paper is an Art*: Self-Improvement Aesthetic Agents for Academic Presentations
 
-<a href='https://arxiv.org/abs/2510.05571'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> <a href='https://evopresent.github.io/'><img src='https://img.shields.io/badge/Project-Page-green'></a> <a href='https://huggingface.co/datasets/TobyYang7/EvoPresent'><img src='https://img.shields.io/badge/🤗-Dataset-blue'></a>
+<a href='https://arxiv.org/abs/2510.05571'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> <a href='https://evopresent.github.io/'><img src='https://img.shields.io/badge/Project-Page-green'></a> <a href='https://huggingface.co/datasets/TobyYang7/EvoPresent'><img src='https://img.shields.io/badge/🤗-Dataset-blue'></a> <a href='https://evopresent.github.io/#demo'><img src='https://img.shields.io/badge/Demo-Live-orange'></a>
 </a>
 
 
@@ -17,8 +17,6 @@
 ![Pipeline](asset/pipeline.png)
 
 Overview of the EvoPresent framework. (a) EvoPresent first performs content extraction and voice generation, then constructs the storyline and script, followed by content enhancement using image generation and knowledge retrieval. Design and rendering are handled next, and the aesthetic checker evaluates the initial slide and provides adjustments. (b) PresAesth is trained on a human-preference aesthetic dataset via multiple tasks (scoring, defect adjustment, and comparison). (c) The PresAesth model guides the agent framework in iterative self-improvement.
-
-## 🧪 Demos
 
 ## 🏋️‍♂️ Training
 
