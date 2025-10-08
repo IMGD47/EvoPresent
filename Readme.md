@@ -43,7 +43,7 @@ This section contains the training infrastructure for the **PresAesth** model, w
    ```
 
 ## EvoPresent Benchmark
-![Pipeline](asset/pipeline.png)
+![data](asset/pipeline.png)
 
 ## Acknowledgement
 We appreciate the releasing codes and data of [open-r1](https://github.com/huggingface/open-r1), [open-r1-multimodal](https://github.com/EvolvingLMMs-Lab/open-r1-multimodal) and [SlideAudit](https://github.com/zhuohaouw/SlideAudit).
