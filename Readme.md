@@ -1,6 +1,6 @@
 # *Presenting a Paper is an Art*: Self-Improvement Aesthetic Agents for Academic Presentations
 
-[![arXiv](https://img.shields.io/badge/arXiv-paper-red.svg)](https://arxiv.org/abs/0000.00000)
+[![arXiv](https://img.shields.io/badge/arXiv-paper-red.svg)](https://arxiv.org/abs/2510.05571)
 [![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://evopresent.github.io/)
 
 ## EvoPresent Agent Pipeline
@@ -42,7 +42,8 @@ We appreciate the releasing codes and data of [open-r1](https://github.com/huggi
 @article{liu2025presenting,
   title={Presenting a Paper is an Art: Self-Improvement Aesthetic Agents for Academic Presentations},
   author={Liu, Chengzhi and Yang, Yuzhe and Zhou, Kaiwen and Zhang, Zhen and Fan, Yue and Xie, Yanan and Qi, Peng and Wang, Xin Eric},
-  journal={arXiv preprint},
-  year={2025}
+  journal={arXiv preprint arXiv:2510.05571},
+  year={2025},
+  url={https://arxiv.org/abs/2510.05571}
 }
 ```
