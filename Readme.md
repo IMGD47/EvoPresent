@@ -1,7 +1,7 @@
 # *Presenting a Paper is an Art*: Self-Improvement Aesthetic Agents for Academic Presentations
 
-[![arXiv](https://img.shields.io/badge/arXiv-paper-red.svg)](https://arxiv.org/abs/2510.05571)
-[![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://evopresent.github.io/)
+<a href='https://arxiv.org/abs/2510.05571'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> <a href='https://evopresent.github.io/'><img src='https://img.shields.io/badge/Project-Page-green'></a> <a href='https://huggingface.co/datasets/TobyYang7/EvoPresent'><img src='https://img.shields.io/badge/🤗-Dataset-blue'></a>
+</a>
 
 
 
