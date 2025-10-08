@@ -6,9 +6,10 @@
 
 
 ## TO DO 
-- [X] Official release of our paper and demo !
-- [X] Launch of the self-improvement aesthetic agent this week.
+- [X] Official release of our paper and demo！
 - [X] Training setup has been made available. The aesthetic model weights will be released this week.
+- [ ] Launch of the self-improvement aesthetic agent this week.
+- [ ] Certain benchmark data has been made available; however, due to potential copyright restrictions, the full benchmark will be released at a later time. 
 
 
 ## EvoPresent Agent Pipeline
