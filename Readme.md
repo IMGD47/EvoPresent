@@ -3,6 +3,14 @@
 [![arXiv](https://img.shields.io/badge/arXiv-paper-red.svg)](https://arxiv.org/abs/2510.05571)
 [![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://evopresent.github.io/)
 
+
+
+## TO DO 
+- [X] Official release of our paper and demo !
+- [X] Launch of the self-improvement aesthetic agent this week.
+- [X] Training setup has been made available. The aesthetic model weights will be released this week.
+
+
 ## EvoPresent Agent Pipeline
 
 ![Pipeline](asset/pipeline.png)
