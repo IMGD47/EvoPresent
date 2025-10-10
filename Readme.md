@@ -11,8 +11,6 @@
 
  ## 🔥 Demo
 
-![Demo Video](asset/demo.mp4)
-
 Check out more at [🎨 project web](https://evopresent.github.io/).
 
 ## 🚀  EvoPresent Agent Pipeline
