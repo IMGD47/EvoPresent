@@ -58,11 +58,13 @@ We appreciate the releasing codes and data of [open-r1](https://github.com/huggi
 ## Citation
 
 ```bibtex
-@article{liu2025presenting,
-  title={Presenting a Paper is an Art: Self-Improvement Aesthetic Agents for Academic Presentations},
-  author={Liu, Chengzhi and Yang, Yuzhe and Zhou, Kaiwen and Zhang, Zhen and Fan, Yue and Xie, Yanan and Qi, Peng and Wang, Xin Eric},
-  journal={arXiv preprint arXiv:2510.05571},
-  year={2025},
-  url={https://arxiv.org/abs/2510.05571}
+@misc{liu2025presentingpaperartselfimprovement,
+      title={Presenting a Paper is an Art: Self-Improvement Aesthetic Agents for Academic Presentations}, 
+      author={Chengzhi Liu and Yuzhe Yang and Kaiwen Zhou and Zhen Zhang and Yue Fan and Yannan Xie and Peng Qi and Xin Eric Wang},
+      year={2025},
+      eprint={2510.05571},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2510.05571}, 
 }
 ```
