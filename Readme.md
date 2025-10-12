@@ -11,6 +11,8 @@
 
  ## 🔥 Demo
 
+ https://github.com/user-attachments/assets/49cd7ab8-3259-4f45-a9eb-a5f8211b9549
+
 Check out more at [🎨 project web](https://evopresent.github.io/).
 
 ## 🚀  EvoPresent Agent Pipeline
