@@ -1,13 +1,13 @@
 # *Presenting a Paper is an Art*: Self-Improvement Aesthetic Agents for Academic Presentations
 
-<a href='https://arxiv.org/abs/2510.05571'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> <a href='https://evopresent.github.io/'><img src='https://img.shields.io/badge/Project-Page-green'></a> <a href='https://huggingface.co/datasets/TobyYang7/EvoPresent'><img src='https://img.shields.io/badge/🤗-Dataset-blue'></a> <a href='https://huggingface.co/LCZZZZ/PresAesth'><img src='https://img.shields.io/badge/🤗-Model-purple'></a> <a href='https://evopresent.github.io/'><img src='https://img.shields.io/badge/Demo-Live-orange'></a> <a href="https://x.com/xwang_lk/status/1975917585175642496" target="_blank"><img alt="X (formerly Twitter) URL" src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fx.com%2F_akhaliq%2Fstatus%2F1927721150584390129"></a> <a href='https://mp.weixin.qq.com/s/A5dkmLVmcpD_8DaPhO7bwg'><img src='https://img.shields.io/badge/Wexin-Blog-blue'></a>
+<a href='https://arxiv.org/abs/2510.05571'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> <a href='https://evopresent.github.io/'><img src='https://img.shields.io/badge/Project-Page-green'></a> <a href='https://huggingface.co/datasets/TobyYang7/EvoPresent'><img src='https://img.shields.io/badge/🤗-Dataset-blue'></a> <a href='https://huggingface.co/LCZZZZ/PresAesth'><img src='https://img.shields.io/badge/🤗-Model-purple'></a> <a href='https://evopresent.github.io/'><img src='https://img.shields.io/badge/Demo-Live-orange'></a> <a href="https://x.com/xwang_lk/status/1975917585175642496" target="_blank"><img alt="X (formerly Twitter) URL" src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fx.com%2F_akhaliq%2Fstatus%2F1927721150584390129"></a> <a href='https://mp.weixin.qq.com/s/_UvfTWG2Ub03XWDL7KchgA'><img src='https://img.shields.io/badge/Wexin-Blog-blue'></a>
     
 
  ## 💡 Update
 - [X] Official release of our paper and demo！ 🎉
 - [X] Training setup has been made available. The aesthetic model weights will be released this week.
 - [ ] Launch of the self-improvement aesthetic agent this week.
-- [ ] Certain benchmark data has been made available; however, due to potential copyright restrictions, the full benchmark will be released at a later time.
+- [ ] Thanks QbitAI (量子位) for sharing our project [link](https://mp.weixin.qq.com/s/_UvfTWG2Ub03XWDL7KchgA)! 🎉
 
  ## 🔥 Demo
 
@@ -70,6 +70,8 @@ CUDA_VISIBLE_DEVICES=1 python3 -m evopresent.ppt.ppt_gen_pipeline \
 ## 🏋️‍♂️ PresAesth Training
 
 This section contains the training infrastructure for the **PresAesth** model, which is based on [Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) and fine-tuned for presentation aesthetics evaluation tasks.
+
+We have released the evaluation dataset on huggingface. Due to potential copyright restrictions, the images cannot be redistributed directly. However, they can be accessed via the links provided in the metadata.
 
 1. **Environment Setup**
    ```bash
