@@ -61,7 +61,7 @@ class SpeechContext:
 
 # DeepSeek Configuration
 deepseek_client = OpenAI(
-    api_key="sk-a735b8725f33478cbb45465e5473c65f",
+    api_key="",
     base_url="https://api.deepseek.com"
 )
 
