@@ -41,7 +41,7 @@ Recommended temperature for `evopresent/ppt/gen_pptx_code.py`: 0.6–0.8. Adjust
  
 ```
 export EVOP_DEEPSEEK_API_KEY='sk....'
-export export OPENAI_API_KEY='sk....'
+export OPENAI_API_KEY='sk....'
 export EVOP_GEMINI_API_KEY='sk....'
 export EVOP_CLAUDE_API_KEY='sk....'
 ```
