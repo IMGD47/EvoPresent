@@ -2,7 +2,7 @@
 
 <a href='https://arxiv.org/abs/2510.05571'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> <a href='https://evopresent.github.io/'><img src='https://img.shields.io/badge/Project-Page-green'></a> <a href='https://huggingface.co/datasets/TobyYang7/EvoPresent'><img src='https://img.shields.io/badge/🤗-Dataset-blue'></a> <a href='https://huggingface.co/LCZZZZ/PresAesth'><img src='https://img.shields.io/badge/🤗-Model-purple'></a> <a href='https://evopresent.github.io/'><img src='https://img.shields.io/badge/Demo-Live-orange'></a>
 
- ## 💡 TO DO 
+ ## 💡 Update
 - [X] Official release of our paper and demo！ 🎉
 - [X] Training setup has been made available. The aesthetic model weights will be released this week.
 - [ ] Launch of the self-improvement aesthetic agent this week.
