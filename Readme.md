@@ -25,6 +25,7 @@ Overview of the EvoPresent framework. (a) EvoPresent first performs content extr
 ## 🛠️ Environment
 ```bash
 pip install -r requirements.txt
+python -m playwright install --with-deps chromium
 ```
 
 **API Installation**
