@@ -44,6 +44,12 @@ This section contains the training infrastructure for the **PresAesth** model, w
    bash ./run.sh
    ```
 
+4. **Evaluation & Inference**
+   ```bash
+   python eval.py
+   python inference.py
+   ```
+
 ## 📊 EvoPresent Benchmark
 ![data](asset/data.jpg)
 
