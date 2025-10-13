@@ -52,7 +52,7 @@ This section contains the training infrastructure for the **PresAesth** model, w
 ![data](asset/compare.jpg)
 
 ## Acknowledgement
-We appreciate the releasing codes and data of [open-r1](https://github.com/huggingface/open-r1), [open-r1-multimodal](https://github.com/EvolvingLMMs-Lab/open-r1-multimodal).
+We appreciate the releasing codes and data of [open-r1-multimodal](https://github.com/EvolvingLMMs-Lab/open-r1-multimodal) and [Paper2Poster](https://github.com/Paper2Poster/Paper2Poster/).
 
 ## Citation
 
