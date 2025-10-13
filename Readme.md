@@ -39,6 +39,8 @@ export EVOP_CLAUDE_API_KEY='sk....'
 ```
 
 ## ⚡ Quick Inference
+`checker-scope` controls the scope of the layout review: `all` (Check all slides), `images` (Check only slides with images/tables), `text` (Check only text-only slides).
+`style` specifies the presentation theme and visual style (such as color scheme, fonts, whitespace, animations, etc.). For example, `tech_dark` applies a dark, tech-style theme. 
 
 ```bash
 CUDA_VISIBLE_DEVICES=1 python3 -m evopresent.ppt.ppt_gen_pipeline \
