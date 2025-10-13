@@ -34,7 +34,8 @@ python -m playwright install --with-deps chromium
 To balance generation speed and quality, the recommended model combinations are:
 - For text and image extraction: `gpt-4o-2024-08-06` and `gpt-4.1-2025-04-14`
 - For slide generation: `deepseek-chat/deepseek-reasoner`, `gemini-2.5-pro`, and `claude-sonnet-4-20250514`
-Recommended temperature for `evopresent/ppt/gen_pptx_code.py`: 0.6–0.8.
+  
+Recommended temperature for `evopresent/ppt/gen_pptx_code.py`: 0.6–0.8. Adjust accordingly for different models.
  
 ```
 export EVOP_DEEPSEEK_API_KEY='sk....'
