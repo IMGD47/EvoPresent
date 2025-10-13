@@ -1,0 +1,333 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5; 
+  font-family: 'Computer Modern', 'Latin Modern', 'Times New Roman', serif; 
+  padding: 2rem;
+  color: #000000;
+  line-height: 1.4;
+}
+
+
+.slide {
+  width: 100%;
+  max-width: 1440px;
+  aspect-ratio: 16/9; 
+  background: #ffffff;
+  
+  border-radius: 0;
+  border: 2px solid #003262;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  padding: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: beamerRise 0.55s ease both;
+
+  
+  background-image:
+    radial-gradient(circle at 12% 10%, rgba(0,50,98,0.05) 0, transparent 24%),
+    radial-gradient(circle at 84% 18%, rgba(253,181,21,0.04) 0, transparent 22%);
+
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  text-align: left;
+}
+
+
+.slide.cover {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.slide:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(135deg, #003262 0%, #FDB515 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+.slide::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(135deg, #FDB515 0%, #003262 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+.slide-content {
+  position: relative;
+  z-index: 1;
+  padding: 70px 40px 50px 40px;
+  flex: 1;
+  background: #ffffff;
+}
+
+
+.slide-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+}
+
+
+.slide-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 2;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.slide-footer .section {
+  flex: 1;
+  text-align: left;
+}
+
+.slide-footer .title {
+  flex: 2;
+  text-align: center;
+}
+
+.slide-footer .page {
+  flex: 1;
+  text-align: right;
+}
+
+
+.slide {
+  border-left: 4px solid #FDB515;
+  border-right: 4px solid #FDB515;
+}
+
+
+.slide > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+@media (max-width: 768px) {
+  .slide {
+    aspect-ratio: 16/9;
+  }
+  
+  .slide-content {
+    padding: 60px 20px 40px 20px;
+  }
+  
+  body {
+    font-family: 'Times New Roman', serif;
+  }
+}
+
+
+.slide h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #003262;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+
+.slide h1::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 0;
+  background: linear-gradient(90deg, #003262, #FDB515);
+  transition: width 0.6s ease;
+  margin: 8px auto 0 auto;
+}
+.slide:hover h1::after { width: 180px; }
+
+@keyframes beamerRise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide h2 {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #003262;
+  margin: 1.5rem 0 1rem 0;
+  border-bottom: 2px solid #FDB515;
+  padding-bottom: 0.3rem;
+}
+
+.slide h3 {
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #FDB515;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.slide p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #000000;
+  text-align: justify;
+}
+
+.slide ul, .slide ol {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.slide li {
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+.slide li::marker {
+  color: #003262;
+}
+
+.slide .center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.slide .author-info {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  color: #003262;
+  font-weight: bold;
+}
+
+.slide .affiliation {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #FDB515;
+  font-weight: bold;
+}
+
+.slide .date-info {
+  margin-top: 3rem;
+  font-size: 1rem;
+  color: #666666;
+}
+
+
+.slide .theorem {
+  background: #fffaf0;
+  border: 2px solid #003262;
+  border-radius: 5px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.slide .theorem-title {
+  background: linear-gradient(90deg, #003262 0%, #0057a3 100%);
+  color: #ffffff;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.slide .theorem-content {
+  padding: 1rem;
+  font-style: italic;
+}
+
+.slide .definition {
+  background: #fff8dc;
+  border: 2px solid #FDB515;
+  border-radius: 5px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.slide .definition-title {
+  background: linear-gradient(90deg, #FDB515 0%, #ffcc33 100%);
+  color: #003262;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.slide .definition-content {
+  padding: 1rem;
+}
+
+.slide .example {
+  background: #f0f8ff;
+  border-left: 4px solid #003262;
+  border-top: 1px solid #FDB515;
+  border-bottom: 1px solid #FDB515;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.slide .example-title {
+  color: #003262;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+
+.slide .highlight {
+  background: linear-gradient(120deg, rgba(253, 181, 21, 0.2) 0%, rgba(253, 181, 21, 0.1) 100%);
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.2rem;
+  color: #003262;
+  font-weight: bold;
+}
+
+.slide .university-name {
+  color: #003262;
+  font-weight: bold;
+  font-size: 1.1rem;
+}

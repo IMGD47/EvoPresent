@@ -1,0 +1,124 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0d0820; 
+  font-family: 'Space Grotesk', 'Orbitron', 'Courier New', monospace; 
+  padding: 2rem;
+  color: #e6e0ff;
+}
+
+
+.slide {
+  width: 100%;
+  max-width: 1440px;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #1a0d3d 0%, #0d0820 50%, #050312 100%);
+  
+  border-radius: 1rem;
+  border: 1px solid #8b5cf6;
+  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.25),
+              inset 0 1px 0 rgba(168, 85, 247, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  padding: 2rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+
+.slide.cover {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.slide:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(139, 92, 246, 0.35),
+              inset 0 1px 0 rgba(168, 85, 247, 0.2);
+}
+
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 75% 75%, rgba(168, 85, 247, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 50% 10%, rgba(196, 181, 253, 0.08) 0%, transparent 30%);
+  z-index: 0;
+  pointer-events: none;
+  animation: cosmic-drift 20s infinite linear;
+}
+
+@keyframes cosmic-drift {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 120px;
+  height: 120px;
+  background-image: 
+    radial-gradient(circle at 20% 20%, #8b5cf6 2px, transparent 2px),
+    radial-gradient(circle at 80% 30%, #a855f7 1.5px, transparent 1.5px),
+    radial-gradient(circle at 40% 70%, #c4b5fd 1px, transparent 1px),
+    radial-gradient(circle at 70% 80%, #8b5cf6 1.5px, transparent 1.5px),
+    radial-gradient(circle at 60% 40%, #a855f7 1px, transparent 1px);
+  background-size: 40px 40px, 35px 35px, 25px 25px, 30px 30px, 20px 20px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
+  animation: starlight 3s infinite ease-in-out;
+}
+
+@keyframes starlight {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.9; }
+}
+
+
+.slide {
+  background-image: 
+    linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+
+.slide > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+@media (max-width: 768px) {
+  .slide {
+    padding: 2rem;
+    border-radius: 0.8rem;
+  }
+  
+  body {
+    font-family: 'Courier New', monospace;
+  }
+}

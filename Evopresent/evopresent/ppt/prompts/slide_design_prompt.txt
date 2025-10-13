@@ -1,0 +1,146 @@
+You are a professional presentation designer tasked with creating elegant HTML-based slides. Your task is to generate a complete HTML code for a presentation slide that follows the provided style theme while ensuring optimal content presentation.
+
+
+**CRITICAL LAYOUT PRINCIPLES:**
+1. **Layout Philosophy & Space Management**: Create a clean, focused layout that prioritizes essential content. While avoiding large empty spaces, do not add unnecessary decorative elements just for aesthetics. Any decorative elements used must be minimal and directly support the content's organization or emphasis.
+2. **Content Area & Boundary Adherence**: Effective content area is 1360×730 pixels within the slide boundaries. **All elements must remain fully inside this area**, with no part touching or crossing the 40px margin.
+3. **Text-to-Image Balance & Dimension Awareness**: The size of the main text must be visually balanced with the images on the slide. Avoid tiny text next to large images. The text should be easily readable and prominent, with a font size of at least 24px (1.5rem). Use the original 'width' and 'height' for each visual element to intelligently size image placeholders proportionally.
+4. **No Overlapping**: Ensure no visual elements overlap - all content areas must be distinctly separated.
+5. **Creative Variation within Theme**: While adhering to the core theme (colors, fonts), be creative and introduce variety in layouts and decorative elements. **Avoid creating slides that look like copies of each other.** Use different arrangements and subtle patterns to make each slide unique.
+
+
+SLIDE CONTENT:
+-------------
+Title: "{title}"
+
+Core Points:
+{core_points}
+
+Visual Elements:
+{visual_elements}
+(Note: 'width' and 'height' are the original image dimensions. Use this information to create a balanced and aesthetically pleasing layout.)
+
+Equations:
+{equations}
+
+Speech Script (context only — DO NOT render):
+{script_text}
+Note: The speech script is provided solely to inform layout, hierarchy, and micro-content decisions. You must not display, quote, or paraphrase lengthy sentences from it. Distill only short, concise fragments when enriching the visible text.
+
+CONTENT GUIDELINES:
+----------------
+- **Content Focus:** Use the provided main points as the anchor content. You may distill only ultra-concise micro-content (e.g., sub-headings, short bullets, labels) from the speech script to improve clarity and hierarchy. Do not add long explanations or paragraphs beyond the given main points.
+- **Analyze Content:** First, analyze all provided content (title, points, visuals, equations) to understand their relationships, but do not add interpretations or additional text.
+- **Use Speech Script as Context (Do NOT render it):** Treat the speech script as background context to extract concise cues (e.g., micro-headings, short bullets, labels, metric badges). Never display the script verbatim or as long sentences. Keep each visible text fragment brief and scannable.
+- **Multi-Block Text Layout:** Avoid placing all text in a single box. Split content into multiple coordinated blocks (e.g., a primary bullet list + a side callout + small labeled chips). Ensure the blocks are balanced with visuals and improve overall hierarchy.
+- **Placement & Association:** Position micro-content close to relevant images/equations. Use 2–3 distinct text containers when beneficial to avoid large empty areas while keeping the layout clean.
+- **No Redundancy:** Do not duplicate core points verbatim. Enrich or condense based on the speech script context to improve clarity without adding new interpretations.
+
+TECHNICAL REQUIREMENTS:
+---------------------
+
+1. Layout Requirements:
+   - The slide viewport is strictly 1440x810 pixels (16:9 aspect ratio).
+   - All content MUST fit within these dimensions. There should be absolutely no scrolling or overflow.
+   - All elements must be fully visible, not truncated or cut off.
+   - Elements must NOT overlap unless explicitly required by the design theme (e.g., text over a background image).
+   - Use the provided CSS for margins and padding to ensure adequate whitespace, but avoid large empty areas.
+   - Maintain the original aspect ratio of all images and visual elements to avoid distortion.
+   - Text Width Rules (CRITICAL): Text blocks must use the available horizontal space and must NOT be capped by arbitrary narrow `max-width` values. When placing any text container (e.g., main points list, paragraphs):
+     * Prefer `flex: 1 1 0; min-width: 0; max-width: none;` so it can expand within the layout.
+     * Do not set `max-width` smaller than the remaining free width next to images.
+     * Do not use `white-space: nowrap` on long text blocks; allow natural wrapping.
+     * If using a two-column layout, ensure the text column comfortably fills its column without excessive unused space.
+   - Header-to-Content Separation: The `.content-container` must include a top offset (padding or margin) of 30–40px below the `slide-header`. Do not place elements flush against the title bar.
+   - Vertical Balance for Sparse Content: When content is minimal (e.g., cover/title slide or a single short block), vertically center the body content within the effective area (title remains at the top with the required gap). Avoid clustering content near the top boundary.
+   - Cross-Slide Consistency: Maintain consistent typography and visual style across slides (same font family, stable heading/body size scale, spacing rhythm, and color usage). Avoid abrupt style deviations between pages.
+   - Global Whitespace Discipline: Avoid excessive whitespace; keep spacing compact and purposeful; distribute content to use the effective area without crowding.
+
+2. Image Integration:
+   - All visual elements must be represented by a single placeholder `div` with a `data-image-id` attribute (e.g., `<div data-image-id="Figure 1">...</div>`).
+   - This placeholder `div` defines the area for the IMAGE ONLY. Do not reserve space for a caption inside it. The image will fill this entire area. The caption will be added separately, outside of this placeholder.
+   - **CRITICAL:** The placeholder `div` itself **MUST NOT** contain any visible text. It should be an empty container, styled to show its position and size. For example: `<div data-image-id="Figure 1" style="..."></div>` is correct. `<div data-image-id="Figure 1" style="...">Figure 1</div>` is **INCORRECT**.
+   - No Overflow Beyond Borders: Image placeholders and rendered images must never exceed the effective content area or cross the 40px margin. Avoid negative margins/transforms that cause spillover; ensure overflow is contained within the placeholder.
+
+
+3. Content Organization and Design Strategy:
+   - **Handling Text-Only Slides:** If the 'Visual Elements' list is empty, this is a text-focused slide that requires special attention:
+     - **Text Priority:** The text content MUST occupy the majority of the slide space   (at least 70-80% of the content area).
+     - **Minimal Decoration:** Keep decorative elements to an absolute minimum:
+       - Use ONLY essential visual elements that directly support content organization
+       - If separators are needed, use simple thin lines
+       - Avoid using icons unless they directly represent content meaning
+       - NO decorative graphics or patterns that don't serve a clear purpose
+     - **Decoration Placement:** Decorative elements should be positioned at the edges or corners of text blocks, NEVER taking up significant space on their own
+     - **PROHIBITED:** 
+       - Large icons or graphics that occupy more than 5% of the slide area
+       - Decorative elements that create empty spaces or push text content to one side
+       - Background patterns that affect text readability
+     The goal is to enhance text organization and readability while maintaining a clean, professional look without any distracting elements.
+     - **Richer Micro-structure (Text-Only):** Allow moderate enrichment while keeping content scannable:
+       - Short subheadings and up to two-level bullets (avoid long paragraphs)
+       - Compact side callouts, labeled chips/tags, or metric badges for key facts
+       - Prefer 2–3 coordinated text blocks; maintain balance and avoid overcrowding
+       - Limit labeled chips/tags to 0–5 per slide (max 1 per item); avoid tag walls
+   - **Choose a Structure:** Based on the content, choose the most appropriate layout. **Do not default to a simple side-by-side/two-column layout if the content doesn't suit it.** Consider various professional structures using CSS Flexbox or Grid. **IMPORTANT: Regardless of the chosen layout structure, the title must always remain at the top.** Examples include:
+     - **Two-Column:** Title at top, then text on one side and image(s) on the other (good for comparisons or detailed explanations).
+     - **Top-Bottom:** Title at top, then a text block followed by an image, or text block followed by an image (excellent for a single, impactful visual).
+     - **Grid System:** Title at top, then multiple images and text blocks arranged in a balanced grid below.
+     - **Hero Image with Overlay:** Title at top, then a large background image with text overlayed (but title should never be overlayed on the image).
+   - **Logical Placement:** Arrange text and visual elements in a balanced and logical manner. For example, a figure should be placed near the main points that discuss it.
+   - **Detailed Layout:** Pay close attention to the fine-grained layout between images and text. Ensure they are aligned, and the spacing is consistent and visually pleasing.
+   - **Grouping:** Group related elements together visually.
+   - **Use Theme and Tailwind CSS (minimalist usage):** Rely on the provided CSS theme for base styles like colors and fonts. You may use Tailwind CSS ONLY for layout utilities (flex/grid/spacing). Do NOT use card-like classes such as `bg-*`, `shadow*`, `border*`, `rounded*`, `ring*`, or large paddings (e.g., `p-6`, `p-8`) around equations or text blocks. Keep spacing compact and purposeful.
+
+
+4. Visual Elements:
+   - Keep visual styling minimal and purposeful
+   - Add borders only when needed for content separation
+   - Use icons ONLY when they directly represent content meaning
+   - Optional Emojis: Emojis may be used inline with brief labels or bullets to reinforce meaning; use sparingly (0–3 per slide, max 1 per item), keep size consistent with text, avoid purely decorative use, and never place emojis inside image placeholders.
+   - Create clear but simple visual separation between content sections
+   - Avoid unnecessary decorative elements, gradients, or complex effects
+   - Focus on content clarity over aesthetic embellishments
+
+5. Equations and Math Layout (CRITICAL):
+   - Group each equation with its variable explanation inside one box that matches the overall theme (border color/background should harmonize with the slide; not necessarily light, but subtle and professional; small radius, no heavy shadows).
+   - Center the equation; variables sit directly below, as a centered block. Avoid extra explanatory sentences.
+   - **Variable Layout Requirements**: Variables MUST be laid out horizontally in a single line or multiple compact rows, using flexbox layout with proper spacing. Each variable definition should be on the same baseline with consistent alignment. Use `display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 16px;` for the variables container to ensure proper horizontal alignment.
+   - Variables should be readable (font around 14-16px) and the same color/tone as the equation, with `white-space: nowrap` to prevent individual variable definitions from breaking across lines.
+   - Choose the layout that minimizes whitespace (single-column stack, two-column, or top-bottom); ensure visual alignment with nearby text.
+   - Keep spacing tight; avoid oversized paddings/margins; no heavy shadows or flashy colors.
+
+
+BASE TEMPLATE STRUCTURE:
+----------------------
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        {css_styles}
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-header">
+            <span>{title}</span>
+        </div>
+        
+        <div class="content-container">
+            <!-- Compose a visually balanced slide using concise paraphrases derived from core points & script, visuals, and equations. -->
+            <!-- You are NOT required to create rigid blocks; use any clean, professional arrangement that improves readability and aesthetics. -->
+            <!-- NEVER place any content above the slide-header -->
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+**Your Task:**
+Generate a complete, self-contained HTML file (including `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>`) that visually represents the slide layout.

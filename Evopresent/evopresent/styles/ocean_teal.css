@@ -1,0 +1,146 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a1a1a; 
+  font-family: 'Inter', 'Roboto', 'Segoe UI', sans-serif; 
+  padding: 2rem;
+  color: #e0f7fa;
+}
+
+
+.slide {
+  width: 100%;
+  max-width: 1440px;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #134e4a 0%, #0f3730 50%, #0a1a1a 100%);
+  
+  border-radius: 1.5rem;
+  border: 1px solid #14b8a6;
+  box-shadow: 0 12px 32px rgba(20, 184, 166, 0.2),
+              inset 0 1px 0 rgba(45, 212, 191, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  padding: 2rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+
+.slide.cover {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.slide:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(20, 184, 166, 0.3),
+              inset 0 1px 0 rgba(45, 212, 191, 0.15);
+}
+
+
+.slide::before {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  left: -30%;
+  width: 160%;
+  height: 60%;
+  background: 
+    radial-gradient(ellipse at center,
+              rgba(20, 184, 166, 0.12) 0%,
+              rgba(45, 212, 191, 0.08) 40%,
+              transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  animation: ocean-wave 8s infinite ease-in-out;
+}
+
+@keyframes ocean-wave {
+  0%, 100% { transform: translateX(0) scale(1); }
+  50% { transform: translateX(20px) scale(1.05); }
+}
+
+
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 100px;
+  height: 150px;
+  background-image: 
+    radial-gradient(circle at 30% 20%, rgba(20, 184, 166, 0.2) 8px, transparent 8px),
+    radial-gradient(circle at 70% 40%, rgba(45, 212, 191, 0.15) 6px, transparent 6px),
+    radial-gradient(circle at 20% 70%, rgba(20, 184, 166, 0.1) 4px, transparent 4px),
+    radial-gradient(circle at 80% 80%, rgba(45, 212, 191, 0.12) 5px, transparent 5px);
+  background-size: 50px 50px, 40px 40px, 30px 30px, 35px 35px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.7;
+  animation: bubbles 6s infinite ease-in-out;
+}
+
+@keyframes bubbles {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(-10px); opacity: 0.9; }
+}
+
+
+.slide {
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 30px,
+      rgba(20, 184, 166, 0.03) 30px,
+      rgba(20, 184, 166, 0.03) 32px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 60px,
+      rgba(45, 212, 191, 0.02) 60px,
+      rgba(45, 212, 191, 0.02) 61px
+    );
+}
+
+
+.slide {
+  position: relative;
+}
+
+.slide:hover::before {
+  animation-duration: 6s;
+}
+
+
+.slide > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+@media (max-width: 768px) {
+  .slide {
+    padding: 2rem;
+    border-radius: 1.2rem;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+}
+
+

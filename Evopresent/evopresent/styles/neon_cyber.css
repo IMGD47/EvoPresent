@@ -1,0 +1,133 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000010; 
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; 
+  padding: 2rem;
+  color: #00ff88;
+}
+
+
+.slide {
+  width: 100%;
+  max-width: 1440px;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #001122 0%, #000010 50%, #000008 100%);
+  
+  border-radius: 0.5rem;
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3),
+              inset 0 0 20px rgba(0, 255, 136, 0.05);
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  padding: 2rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+
+.slide.cover {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.slide:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.5),
+              inset 0 0 30px rgba(0, 255, 136, 0.1);
+  border-color: #00ffaa;
+}
+
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 255, 136, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 136, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+  pointer-events: none;
+  animation: grid-pulse 4s infinite ease-in-out;
+}
+
+@keyframes grid-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+
+.slide::after {
+  content: "01001100 01100101 01110100 01110100 01100101 01110010";
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  font-size: 0.7rem;
+  color: rgba(0, 255, 136, 0.3);
+  font-family: 'Courier New', monospace;
+  z-index: 0;
+  pointer-events: none;
+  animation: data-flow 8s infinite linear;
+}
+
+@keyframes data-flow {
+  0% { opacity: 0.2; transform: translateX(100px); }
+  50% { opacity: 0.5; transform: translateX(0); }
+  100% { opacity: 0.2; transform: translateX(-100px); }
+}
+
+
+.slide {
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 136, 0.02) 2px,
+      rgba(0, 255, 136, 0.02) 4px
+    );
+}
+
+
+.slide {
+  position: relative;
+}
+
+.slide:before {
+  background-image: 
+    linear-gradient(45deg, transparent 0%, rgba(0, 255, 136, 0.1) 1%, transparent 2%),
+    linear-gradient(-45deg, transparent 0%, rgba(0, 255, 136, 0.1) 1%, transparent 2%);
+}
+
+
+.slide > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+@media (max-width: 768px) {
+  .slide {
+    padding: 2rem;
+    border-radius: 0.3rem;
+  }
+  
+  body {
+    font-family: 'Courier New', monospace;
+  }
+}

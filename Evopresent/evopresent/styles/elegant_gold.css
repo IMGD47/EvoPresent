@@ -1,0 +1,106 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1a1612; 
+  font-family: 'Playfair Display', 'Times New Roman', Georgia, serif; 
+  padding: 2rem;
+  color: #f5e6d3;
+}
+
+
+.slide {
+  width: 100%;
+  max-width: 1440px;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #2d2418 0%, #1a1612 50%, #0f0d0a 100%);
+  
+  border-radius: 1rem;
+  border: 2px solid #d4af37; 
+  box-shadow: 0 12px 32px rgba(212, 175, 55, 0.15),
+              inset 0 1px 0 rgba(212, 175, 55, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  padding: 2rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+
+.slide.cover {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.slide:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.25),
+              inset 0 1px 0 rgba(212, 175, 55, 0.2);
+}
+
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  right: -30%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle at center,
+              rgba(212, 175, 55, 0.12) 0%,
+              rgba(184, 134, 11, 0.08) 40%,
+              transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+
+.slide::after {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  width: 120px;
+  height: 120px;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(212, 175, 55, 0.1) 2px,
+      rgba(212, 175, 55, 0.1) 4px
+    );
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+.slide > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+@media (max-width: 768px) {
+  .slide {
+    padding: 2rem;
+    border-radius: 0.8rem;
+  }
+  
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+  }
+}

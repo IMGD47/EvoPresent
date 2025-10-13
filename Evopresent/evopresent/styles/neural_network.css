@@ -1,0 +1,436 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrains Mono', 'Source Code Pro', 'Roboto Mono', monospace;
+    background: radial-gradient(ellipse at center, #1a1a2e 0%, #16213e 30%, #0f3460 70%, #0e2954 100%);
+    color: #ffffff;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(0, 255, 136, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 20% 80%, rgba(78, 205, 196, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 80% 80%, rgba(255, 159, 67, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, rgba(199, 125, 255, 0.1) 1px, transparent 1px);
+    background-size: 200px 200px, 300px 300px, 250px 250px, 180px 180px, 400px 400px;
+    animation: neural-drift 20s infinite linear;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes neural-drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-50px, -50px); }
+}
+
+
+.slide {
+    width: 100%;
+    max-width: 1440px;
+    aspect-ratio: 16/9;
+    background: 
+        linear-gradient(135deg, 
+            rgba(26, 26, 46, 0.9) 0%, 
+            rgba(22, 33, 62, 0.85) 25%, 
+            rgba(15, 52, 96, 0.8) 50%, 
+            rgba(22, 33, 62, 0.85) 75%, 
+            rgba(26, 26, 46, 0.9) 100%);
+    position: relative;
+    z-index: 20;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 2px solid rgba(0, 255, 136, 0.3);
+    border-radius: 15px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        inset 0 0 20px rgba(0, 255, 136, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+.slide:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 255, 136, 0.6);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.5),
+        inset 0 0 30px rgba(0, 255, 136, 0.2),
+        0 0 50px rgba(0, 255, 136, 0.3);
+}
+
+
+.slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        
+        linear-gradient(90deg, transparent 0%, rgba(0, 255, 136, 0.2) 20%, transparent 25%, transparent 75%, rgba(0, 255, 136, 0.2) 80%, transparent 100%),
+        linear-gradient(90deg, transparent 0%, rgba(255, 107, 107, 0.2) 15%, transparent 20%, transparent 80%, rgba(255, 107, 107, 0.2) 85%, transparent 100%),
+        
+        linear-gradient(0deg, transparent 0%, rgba(78, 205, 196, 0.2) 30%, transparent 35%, transparent 65%, rgba(78, 205, 196, 0.2) 70%, transparent 100%),
+        
+        linear-gradient(45deg, transparent 0%, rgba(255, 159, 67, 0.1) 45%, transparent 55%),
+        linear-gradient(-45deg, transparent 0%, rgba(199, 125, 255, 0.1) 45%, transparent 55%);
+    background-size: 100px 100px, 120px 120px, 100px 100px, 200px 200px, 180px 180px;
+    z-index: 1;
+    pointer-events: none;
+    animation: network-pulse 6s infinite ease-in-out;
+}
+
+@keyframes network-pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+
+.neural-node {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, rgba(0, 255, 136, 0.8) 0%, rgba(0, 255, 136, 0.3) 70%, transparent 100%);
+    border-radius: 50%;
+    z-index: 5;
+    animation: node-pulse 3s infinite ease-in-out;
+}
+
+.neural-node:nth-child(1) {
+    top: 15%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.neural-node:nth-child(2) {
+    top: 25%;
+    right: 25%;
+    animation-delay: -0.5s;
+    background: radial-gradient(circle, rgba(255, 107, 107, 0.8) 0%, rgba(255, 107, 107, 0.3) 70%, transparent 100%);
+}
+
+.neural-node:nth-child(3) {
+    bottom: 20%;
+    left: 15%;
+    animation-delay: -1s;
+    background: radial-gradient(circle, rgba(78, 205, 196, 0.8) 0%, rgba(78, 205, 196, 0.3) 70%, transparent 100%);
+}
+
+.neural-node:nth-child(4) {
+    bottom: 30%;
+    right: 20%;
+    animation-delay: -1.5s;
+    background: radial-gradient(circle, rgba(255, 159, 67, 0.8) 0%, rgba(255, 159, 67, 0.3) 70%, transparent 100%);
+}
+
+.neural-node:nth-child(5) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: -2s;
+    background: radial-gradient(circle, rgba(199, 125, 255, 0.8) 0%, rgba(199, 125, 255, 0.3) 70%, transparent 100%);
+}
+
+@keyframes node-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.5); opacity: 1; }
+}
+
+
+.connection-line {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, rgba(0, 255, 136, 0.6) 50%, transparent 100%);
+    z-index: 4;
+    animation: data-flow 4s infinite ease-in-out;
+}
+
+.connection-line:nth-child(6) {
+    top: 20%;
+    left: 20%;
+    width: 55%;
+    transform: rotate(15deg);
+    animation-delay: 0s;
+}
+
+.connection-line:nth-child(7) {
+    top: 30%;
+    left: 15%;
+    width: 40%;
+    transform: rotate(-30deg);
+    animation-delay: -1s;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 107, 107, 0.6) 50%, transparent 100%);
+}
+
+.connection-line:nth-child(8) {
+    bottom: 25%;
+    left: 15%;
+    width: 65%;
+    transform: rotate(5deg);
+    animation-delay: -2s;
+    background: linear-gradient(90deg, transparent 0%, rgba(78, 205, 196, 0.6) 50%, transparent 100%);
+}
+
+@keyframes data-flow {
+    0%, 100% { opacity: 0.3; background-size: 100% 100%; }
+    50% { opacity: 1; background-size: 200% 100%; }
+}
+
+
+.content-container {
+    height: 100%;
+    padding: 4rem;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #00ff88, #4ecdc4, #ff6b6b, #ffa726, #c77dff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+    animation: neural-gradient 4s ease-in-out infinite;
+    text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+}
+
+@keyframes neural-gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+
+.ai-panel {
+    background: rgba(0, 20, 40, 0.6);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 1rem 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.ai-panel:hover {
+    border-color: rgba(0, 255, 136, 0.6);
+    background: rgba(0, 30, 60, 0.7);
+    transform: translateX(8px);
+}
+
+.ai-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.2), transparent);
+    transition: left 0.8s ease;
+}
+
+.ai-panel:hover::before {
+    left: 100%;
+}
+
+
+.processing-indicator {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 4px;
+}
+
+.processing-dot {
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 255, 136, 0.8);
+    border-radius: 50%;
+    animation: processing-blink 1.5s infinite ease-in-out;
+}
+
+.processing-dot:nth-child(2) {
+    animation-delay: 0.3s;
+    background: rgba(255, 107, 107, 0.8);
+}
+
+.processing-dot:nth-child(3) {
+    animation-delay: 0.6s;
+    background: rgba(78, 205, 196, 0.8);
+}
+
+@keyframes processing-blink {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+
+.neural-button {
+    background: linear-gradient(45deg, rgba(0, 255, 136, 0.2), rgba(78, 205, 196, 0.2));
+    border: 2px solid rgba(0, 255, 136, 0.5);
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    color: #00ff88;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.neural-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 255, 136, 0.4);
+    background: linear-gradient(45deg, rgba(0, 255, 136, 0.3), rgba(78, 205, 196, 0.3));
+    border-color: rgba(0, 255, 136, 0.8);
+}
+
+.neural-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.neural-button:hover::before {
+    left: 100%;
+}
+
+
+.data-grid {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 120px;
+    height: 80px;
+    z-index: 6;
+}
+
+.data-grid::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 255, 136, 0.4) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 136, 0.4) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: grid-scan 3s infinite ease-in-out;
+}
+
+@keyframes grid-scan {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+
+.code-decoration {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: rgba(0, 255, 136, 0.3);
+    line-height: 1.4;
+    z-index: 3;
+    animation: code-scroll 10s infinite linear;
+}
+
+.code-decoration::before {
+    content: "def neural_process():\n    layers = initialize_network()\n    for epoch in range(1000):\n        forward_pass()\n        backpropagate()\n    return optimized_model";
+    white-space: pre;
+}
+
+@keyframes code-scroll {
+    0% { opacity: 0; transform: translateY(20px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-20px); }
+}
+
+
+.signal-wave {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(0, 255, 136, 0.6) 20%, 
+        transparent 40%, 
+        rgba(255, 107, 107, 0.6) 60%, 
+        transparent 80%, 
+        rgba(78, 205, 196, 0.6) 100%);
+    transform: translateY(-50%);
+    z-index: 2;
+    animation: signal-propagate 5s infinite ease-in-out;
+}
+
+@keyframes signal-propagate {
+    0% { transform: translateY(-50%) scaleX(0); opacity: 0; }
+    50% { transform: translateY(-50%) scaleX(1); opacity: 1; }
+    100% { transform: translateY(-50%) scaleX(0); opacity: 0; }
+}
+
+
+@media (max-width: 768px) {
+    .content-container {
+        padding: 2rem;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .neural-node,
+    .connection-line,
+    .data-grid,
+    .code-decoration,
+    .signal-wave {
+        display: none;
+    }
+    
+    .ai-panel {
+        padding: 1.5rem;
+    }
+}
+

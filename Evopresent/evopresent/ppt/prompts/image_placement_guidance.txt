@@ -1,0 +1,30 @@
+# single_prefix
+This is the sole visual element. It should be the main focus.
+
+# single_square
+The text content is concise. A good layout is to arrange the image and the text block side by side. Both elements should be balanced in size and visual weight, ensuring neither dominates the slide. This creates a clear, harmonious composition.
+
+# single_landscape
+This is a wide image. It works well placed at the top or bottom of the slide, spanning a significant width, with the text block occupying the remaining vertical space.
+
+# single_portrait
+This is a tall image. A side-by-side layout is highly effective: place the image on one side (e.g., left or right) and the text block on the other.
+
+# two_base
+This slide contains two images and a text block. Your task is to arrange these three elements for a balanced and professional composition.
+Analyze each image's properties (size, orientation) to determine its best placement. Here are some specific layout strategies:
+- **Side-by-Side (Horizontal):** Place the images next to each other. **CRITICAL ALIGNMENT RULE: They MUST have the same height.** Adjust their widths to preserve their individual aspect ratios. This creates a very clean, professional look.
+- **Stacked (Vertical):** Place one image above the other. **CRITICAL ALIGNMENT RULE: They MUST have the same width.** Adjust their heights to preserve their aspect ratios.
+- **Split Layout:** Position the text block between the two images, or place one image on one side of the slide with the text and the other image on the opposite side.
+The images do not need to be grouped together. Feel free to place them in different areas of the slide to best support the content.
+
+# many_base
+This slide contains {num_images} images and a text block. Your primary goal is to create a clean, organized, and professional layout.
+**CRITICAL RULES: 1. All elements MUST stay within the slide's content boundaries. 2. NO elements may overlap. 3. Ensure captions are readable and associated with their image.**
+
+Given the number of images, consider these specific layout strategies:
+- **Aligned Row/Column:** Arrange images in a single horizontal row or a vertical column. This is a simple but effective technique. **IMPORTANT ALIGNMENT RULE:** If you arrange them in a **row**, they **MUST all have the same height**. If you arrange them in a **column**, they **MUST all have the same width**. Adjust the other dimension to preserve each image's original aspect ratio. This respects the image's shape while maintaining a clean alignment.
+- **Grid Layout:** Arrange the images in a grid (e.g., 2x2, 3x1). This creates a structured and balanced look. For a clean grid, it is best to make all image placeholders in the grid the same size, which may require cropping the images to fit.
+- **Main Image with Satellites:** If one image is more important or larger, make it the focal point. Arrange the smaller "satellite" images around it. This creates a clear visual hierarchy.
+
+**General Tip:** Do not just randomly place images. Look for opportunities to align their edges or centers to create a sense of order.

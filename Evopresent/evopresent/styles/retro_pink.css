@@ -1,0 +1,142 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2a1530; 
+  font-family: 'Righteous', 'Orbitron', 'Arial Black', sans-serif; 
+  padding: 2rem;
+  color: #ffb3e6;
+}
+
+
+.slide {
+  width: 100%;
+  max-width: 1440px;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #4a1f5a 0%, #2a1530 50%, #1a0f20 100%);
+  
+  border-radius: 1rem;
+  border: 3px solid #ff1493;
+  box-shadow: 0 0 25px rgba(255, 20, 147, 0.4),
+              inset 0 0 25px rgba(255, 105, 180, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  padding: 2rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+
+.slide.cover {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.slide:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 35px rgba(255, 20, 147, 0.6),
+              inset 0 0 35px rgba(255, 105, 180, 0.15);
+  border-color: #ff69b4;
+}
+
+
+.slide::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: 
+    linear-gradient(rgba(255, 20, 147, 0.3) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(255, 20, 147, 0.3) 2px, transparent 2px);
+  background-size: 50px 50px;
+  z-index: 0;
+  pointer-events: none;
+  transform: perspective(500px) rotateX(30deg);
+  opacity: 0.6;
+  animation: retro-glow 3s infinite ease-in-out;
+}
+
+@keyframes retro-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 150px;
+  height: 100px;
+  background-image: 
+    linear-gradient(45deg, transparent 48%, #ff1493 49%, #ff1493 51%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, #ff69b4 49%, #ff69b4 51%, transparent 52%);
+  background-size: 20px 20px, 25px 25px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.7;
+  animation: neon-flicker 2s infinite ease-in-out;
+}
+
+@keyframes neon-flicker {
+  0%, 100% { opacity: 0.7; }
+  25% { opacity: 1; }
+  50% { opacity: 0.5; }
+  75% { opacity: 0.9; }
+}
+
+
+.slide {
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 20, 147, 0.05) 10px,
+      rgba(255, 20, 147, 0.05) 15px,
+      transparent 15px,
+      transparent 25px,
+      rgba(255, 105, 180, 0.03) 25px,
+      rgba(255, 105, 180, 0.03) 30px
+    );
+}
+
+
+.slide {
+  position: relative;
+}
+
+.slide:before {
+  filter: blur(1px);
+}
+
+
+.slide > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+@media (max-width: 768px) {
+  .slide {
+    padding: 2rem;
+    border-radius: 0.8rem;
+  }
+  
+  body {
+    font-family: 'Arial Black', sans-serif;
+  }
+}

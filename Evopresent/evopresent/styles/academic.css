@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8f9fa;
+}
+
+.slide {
+    width: 100%;
+    max-width: __SLIDE_WIDTH__px;
+    aspect-ratio: 16/9;
+    background-color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    border: 1px solid #e9ecef;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-height: 0;
+    padding: 20px;
+}
+
+figure {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #dee2e6;
+}
+
+figure img, .image-element {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-height: 0;
+    border: none;
+}
+
+figure figcaption {
+    margin-top: 10px;
+    font-size: 0.95em;
+    text-align: center;
+    color: #212529;
+    flex-shrink: 0;
+    padding: 5px 10px;
+    font-family: 'Times New Roman', serif;
+    border-top: 1px solid #dee2e6;
+}
+
+.equation-container {
+    margin: 2rem 0;
+    max-width: 100%;
+    overflow: hidden;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    background: #ffffff;
+}

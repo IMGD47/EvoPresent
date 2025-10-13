@@ -1,0 +1,48 @@
+IMPORTANT INSTRUCTION: For the visual element placeholders (divs with 'data-image-id'), you MUST use a very simple style.
+A light gray background is sufficient (e.g., 'background-color: #f0f0f0;'). DO NOT add any borders, outlines, or other styles that create a visible frame around the placeholder.
+DO NOT use any complex colors, gradients, or decorative patterns for these placeholders. Their purpose is purely for layout.
+DO NOT add any text captions for the images in the HTML. Captions will be added automatically later. Focus only on the layout of the placeholder divs.
+
+Crucially, you MUST also include the following CSS to enforce the correct aspect ratio for each placeholder, based on the original image dimensions. Add this inside the main <style> tag:
+<style>
+/* Enforce aspect ratio and boundary constraints for placeholders */
+{{ASPECT_RATIO_STYLES}}
+div[data-image-id] {
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+</style>
+
+**CRITICAL LAYOUT RULE for Placeholders:** The <style> tag above defines the aspect-ratio for each image placeholder. To ensure this works correctly, when defining the size of a placeholder div with an inline style, you should define EITHER its width OR its height, but NEVER BOTH. The browser will automatically calculate the other dimension to maintain the correct aspect ratio. For example, for a square image, setting style="width: 800px;" is enough to create a perfect 800x800px square.
+
+**ABSOLUTE BOUNDARY RULE (OVERRIDE):** This is the most important rule and it overrides any other dimension instructions. ALL elements (including text blocks, images, and any decorative shapes) MUST be contained entirely within the slide's content area, which is 1440px wide and 810px high.
+- For any element using position: absolute;, the sum of its top and height properties MUST NOT exceed 810px.
+- Similarly, the sum of its left and width properties MUST NOT exceed 1440px.
+- For any element in the normal flow, its dimensions and margins must not cause it to extend beyond the content area.
+- NO ELEMENT, under any circumstances, should be positioned or sized to extend beyond these boundaries. Double-check your final layout to ensure full compliance.
+
+UNIFIED RENDERING REQUIREMENTS (DO THIS NOW IN THE SAME PASS):
+- Apply the provided CSS style rules (css_styles) as the base theme for the slide.
+- Add tasteful, professional animations and transitions consistent with the theme for headings, sections, and text blocks. Keep them subtle and performant.
+- Use clean typography, spacing, and hierarchy so the slide is visually polished without requiring a separate enhancement step.
+- Do not add image captions in this step; images will be embedded later using the placeholders defined above.
+- Return a complete, standalone HTML document including all CSS within a single <style> tag.
+
+OPTIONAL ENHANCEMENTS (ONLY IF BENEFICIAL AND CONSISTENT WITH THEME):
+1) Icons (0-2 max per slide):
+   - Use Font Awesome 6 if icons are added (include CDN once inside <head>):
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   - Example inline usage: <i class="fas fa-microscope" style="margin-right:8px"></i>
+   - Icon colors must use theme variables from css_styles; avoid new colors
+
+2) Charts (ONLY when slide contains quantitative data that benefits from a chart):
+   - Include Chart.js CDN (inside <head>) only if a chart canvas is present:
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   - Provide minimal canvas element, e.g.: <canvas id="chart-1" style="max-width:100%;height:260px"></canvas>
+   - Initialize the chart in an inline <script> at end of <body>, using template-consistent colors and responsive sizing
+
+3) Decorative background/patterns (for text_heavy or minimal_text when decoration is appropriate):
+   - Keep subtle, non-distracting, accessible; maintain strong text contrast
+   - Prefer lightweight CSS gradients/shapes; avoid heavy image assets
+   - Use only theme colors from css_styles

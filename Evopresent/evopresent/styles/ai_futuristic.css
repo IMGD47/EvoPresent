@@ -1,0 +1,307 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: radial-gradient(ellipse at center, #001122 0%, #000510 50%, #000000 100%);
+    color: #ffffff;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.slide {
+    width: 100%;
+    max-width: 1440px;
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, #001a2e 0%, #001122 25%, #000a15 75%, #000000 100%);
+    position: relative;
+    z-index: 20;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 2px solid rgba(0, 150, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 
+        0 20px 60px rgba(0, 150, 255, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        0 30px 80px rgba(0, 150, 255, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    border-color: rgba(0, 200, 255, 0.5);
+}
+
+
+.slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 150, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 150, 255, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 25% 25%, rgba(0, 255, 200, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255, 0, 150, 0.08) 0%, transparent 50%);
+    background-size: 50px 50px, 50px 50px, 400px 400px, 300px 300px;
+    z-index: 1;
+    pointer-events: none;
+    animation: hologram-pulse 8s infinite ease-in-out;
+}
+
+@keyframes hologram-pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+
+.slide::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, rgba(0, 200, 255, 0.8), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255, 100, 200, 0.6), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(0, 255, 150, 0.7), transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(100, 200, 255, 0.5), transparent),
+        radial-gradient(2px 2px at 160px 30px, rgba(255, 200, 100, 0.8), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    z-index: 1;
+    pointer-events: none;
+    animation: particles-float 15s infinite linear;
+}
+
+@keyframes particles-float {
+    0% { transform: translateY(0) translateX(0); }
+    100% { transform: translateY(-100vh) translateX(50px); }
+}
+
+
+.slide {
+    position: relative;
+}
+
+.slide:before {
+    background: 
+        linear-gradient(45deg, transparent 30%, rgba(0, 150, 255, 0.1) 50%, transparent 70%),
+        linear-gradient(-45deg, transparent 30%, rgba(255, 100, 200, 0.1) 50%, transparent 70%);
+}
+
+
+.content-container {
+    height: 100%;
+    padding: 4rem;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #00c6ff, #0072ff, #00c6ff, #ff00e6);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+    animation: gradient-flow 3s ease-in-out infinite;
+    text-shadow: 0 0 30px rgba(0, 198, 255, 0.5);
+    filter: drop-shadow(0 0 10px rgba(0, 198, 255, 0.3));
+}
+
+@keyframes gradient-flow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+
+.ai-neural-decoration {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0, 200, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: neural-pulse 4s infinite ease-in-out;
+    z-index: 5;
+}
+
+.ai-neural-decoration::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(0, 255, 150, 0.6) 2px, transparent 3px),
+        radial-gradient(circle at 70% 70%, rgba(255, 100, 200, 0.6) 2px, transparent 3px),
+        radial-gradient(circle at 50% 20%, rgba(0, 200, 255, 0.6) 1px, transparent 2px);
+    background-size: 30px 30px;
+    border-radius: 50%;
+    animation: node-connect 6s infinite linear;
+}
+
+@keyframes neural-pulse {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.6; }
+    50% { transform: scale(1.1) rotate(180deg); opacity: 1; }
+}
+
+@keyframes node-connect {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+
+.tech-panel {
+    background: rgba(0, 20, 40, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 150, 255, 0.3);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 1rem 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.tech-panel:hover {
+    border-color: rgba(0, 200, 255, 0.6);
+    background: rgba(0, 30, 60, 0.8);
+    transform: translateX(10px);
+}
+
+.tech-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 200, 255, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.tech-panel:hover::before {
+    left: 100%;
+}
+
+
+.holo-button {
+    background: linear-gradient(45deg, rgba(0, 150, 255, 0.2), rgba(255, 100, 200, 0.2));
+    border: 2px solid rgba(0, 200, 255, 0.5);
+    border-radius: 25px;
+    padding: 1rem 2.5rem;
+    color: #00c6ff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+
+.holo-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 200, 255, 0.4);
+    background: linear-gradient(45deg, rgba(0, 200, 255, 0.3), rgba(255, 100, 200, 0.3));
+    border-color: rgba(0, 255, 200, 0.8);
+}
+
+
+.quantum-dots {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    width: 150px;
+    height: 150px;
+    z-index: 5;
+}
+
+.quantum-dots::before,
+.quantum-dots::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, rgba(0, 255, 150, 0.8) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: quantum-orbit 5s infinite linear;
+}
+
+.quantum-dots::after {
+    animation-delay: -2.5s;
+    background: radial-gradient(circle, rgba(255, 100, 200, 0.8) 0%, transparent 70%);
+}
+
+@keyframes quantum-orbit {
+    0% { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+}
+
+
+.data-stream {
+    position: absolute;
+    top: 20%;
+    left: -100px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: rgba(0, 255, 150, 0.4);
+    white-space: nowrap;
+    animation: stream-flow 12s infinite linear;
+    z-index: 2;
+}
+
+.data-stream::before {
+    content: "AI.process() → neural.network() → deep.learning() → innovation.execute()";
+}
+
+@keyframes stream-flow {
+    0% { transform: translateX(-100px); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateX(calc(100vw + 100px)); opacity: 0; }
+}
+
+
+@media (max-width: 768px) {
+    .content-container {
+        padding: 2rem;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .ai-neural-decoration,
+    .quantum-dots {
+        display: none;
+    }
+}
+
+

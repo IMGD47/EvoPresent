@@ -1,0 +1,183 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a0e1a;
+  font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+  padding: 2rem;
+  color: #e1e8f0;
+  line-height: 1.5;
+}
+
+.slide {
+  width: 100%;
+  max-width: 1440px;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #1a2332 0%, #0f1419 50%, #0a0e1a 100%);
+  border-radius: 1rem;
+  border: 2px solid #00d4ff;
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.2),
+              inset 0 0 30px rgba(0, 212, 255, 0.05);
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  padding: 2rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: aiSlideIn 0.8s ease both;
+
+  background-image:
+    linear-gradient(90deg, rgba(0, 212, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(0, 212, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 20% 20%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(138, 43, 226, 0.06) 0%, transparent 50%);
+  background-size: 50px 50px, 50px 50px, 200px 200px, 150px 150px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.slide.cover {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 50px rgba(0, 212, 255, 0.4),
+              inset 0 0 50px rgba(0, 212, 255, 0.1);
+  border-color: #00ffaa;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, 
+              transparent 0%, 
+              #00d4ff 20%, 
+              #8a2be2 50%, 
+              #00ffaa 80%, 
+              transparent 100%);
+  background-size: 200% 100%;
+  animation: ai-data-flow 3s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 100px;
+  height: 100px;
+  background-image: 
+    radial-gradient(circle at 20% 20%, #00d4ff 3px, transparent 3px),
+    radial-gradient(circle at 80% 20%, #8a2be2 2px, transparent 2px),
+    radial-gradient(circle at 50% 80%, #00ffaa 2.5px, transparent 2.5px),
+    radial-gradient(circle at 20% 80%, #00d4ff 2px, transparent 2px),
+    radial-gradient(circle at 80% 80%, #ff6b9d 2px, transparent 2px);
+  background-size: 40px 40px, 35px 35px, 45px 45px, 30px 30px, 38px 38px;
+  opacity: 0.7;
+  animation: neural-pulse 4s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.slide h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.slide h1::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 0;
+  background: linear-gradient(90deg, #00d4ff, #8a2be2, #00ffaa);
+  transition: width 0.8s ease;
+  margin-top: 8px;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.slide:hover h1::after { 
+  width: 200px; 
+  animation: tech-glow 2s ease-in-out infinite alternate;
+}
+
+.slide h2 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: #00d4ff;
+  margin-bottom: 1rem;
+}
+
+.slide h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #8a2be2;
+  margin-bottom: 0.75rem;
+}
+
+.slide p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #e1e8f0;
+}
+
+.slide > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .slide {
+    padding: 2rem;
+    border-radius: 0.8rem;
+  }
+  
+  body {
+    font-family: 'SF Mono', monospace;
+  }
+}
+
+@keyframes aiSlideIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px) scale(0.95); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0) scale(1); 
+  }
+}
+
+@keyframes ai-data-flow {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes neural-pulse {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+@keyframes tech-glow {
+  0% { box-shadow: 0 0 10px rgba(0, 212, 255, 0.5); }
+  100% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.8); }
+}
+
+
