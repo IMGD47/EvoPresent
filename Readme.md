@@ -22,18 +22,22 @@ Check out more at [🎨 project web](https://evopresent.github.io/).
 
 Overview of the EvoPresent framework. (a) EvoPresent first performs content extraction and voice generation, then constructs the storyline and script, followed by content enhancement using image generation and knowledge retrieval. Design and rendering are handled next, and the aesthetic checker evaluates the initial slide and provides adjustments. (b) PresAesth is trained on a human-preference aesthetic dataset via multiple tasks (scoring, defect adjustment, and comparison). (c) The PresAesth model guides the agent framework in iterative self-improvement.
 
-## 🛠️ Environment
+## Installation
+
+**Environment**
 ```bash
 pip install -r requirements.txt
 python -m playwright install --with-deps chromium
 ```
 
 **API Installation**
+```
 export EVOP_DEEPSEEK_API_KEY='sk....'
 export export OPENAI_API_KEY='sk....'
 export EVOP_GEMINI_API_KEY='sk....'
 export EVOP_CLAUDE_API_KEY='sk....'
 ```
+
 ## ⚡ Quick Inference
 
 
