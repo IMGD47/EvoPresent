@@ -28,7 +28,7 @@ Overview of the EvoPresent framework. (a) EvoPresent first performs content extr
 **Environment**
 ```bash
 conda create -n evopresent python=3.10
-pip install -r requirements.txt
+pip install -r Evopresent/requirements.txt
 python -m playwright install --with-deps chromium
 ```
 
