@@ -14,6 +14,18 @@
 
 Check out more at [🎨 project web](https://evopresent.github.io/).
 
+## 🛠️ Environment
+```bash
+pip install -r requirements.txt
+```
+
+**API Installation**
+Create a `.env` file in the project root and add your OpenAI API key:
+```bash
+OPENAI_API_KEY=<your_openai_api_key>
+```
+
+
 ## 🚀  EvoPresent Agent Pipeline
 
 ![Pipeline](asset/pipeline.png)
