@@ -40,10 +40,10 @@ To balance generation speed and quality, the recommended model combinations are:
 Recommended temperature for `evopresent/ppt/gen_pptx_code.py`: 0.6–0.8. Adjust accordingly for different models.
  
 ```
-export EVOP_DEEPSEEK_API_KEY='sk....'
-export OPENAI_API_KEY='sk....'
-export EVOP_GEMINI_API_KEY='sk....'
-export EVOP_CLAUDE_API_KEY='sk....'
+export EVOP_DEEPSEEK_API_KEY=
+export OPENAI_API_KEY=
+export EVOP_GEMINI_API_KEY=
+export EVOP_CLAUDE_API_KEY=
 ```
 
 ## ⚡ Quick Inference
