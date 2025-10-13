@@ -29,9 +29,10 @@ python -m playwright install --with-deps chromium
 ```
 
 **API Installation**
-Create a `.env` file in the project root and add your OpenAI API key:
-```bash
-OPENAI_API_KEY=<your_openai_api_key>
+export EVOP_DEEPSEEK_API_KEY='sk....'
+export export OPENAI_API_KEY='sk....'
+export EVOP_GEMINI_API_KEY='sk....'
+export EVOP_CLAUDE_API_KEY='sk....'
 ```
 ## ⚡ Quick Inference
 
