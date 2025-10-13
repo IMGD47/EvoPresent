@@ -40,6 +40,21 @@ export EVOP_CLAUDE_API_KEY='sk....'
 
 ## ⚡ Quick Inference
 
+```bash
+CUDA_VISIBLE_DEVICES=1 python3 -m evopresent.ppt.ppt_gen_pipeline \
+  --paper_path="/root/Code/Evopresent/paper_input/paper.pdf" \
+  --model_name_t="gpt-4o" \  # or gpt-4.1
+  --model_name_v="gpt-4o" \  # or gpt-4.1
+  --paper_name="paper" \
+  --target_slides=15 \
+  --style="tech_dark" \
+  --checker=on \   #  You can toggle it to control speed.
+  --scholar=on \   # You can toggle it to control speed.
+  --checker-scope=images \   # all/images/text/
+  --html-model gemini-2.5-pro \   
+  --checker-model gpt-4o
+```
+
 
 
 
