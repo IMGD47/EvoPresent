@@ -11,8 +11,8 @@ from PIL import Image
 
 
 class ImageGenerator:
-    API_HOST = "api.lingximoyu.com"
-    API_KEY = "sk-cNo7PbHcObSaeSNW19Ef132943F6452dA02d8b5810E09bE7"
+    API_HOST = "xxxxx"
+    API_KEY = "xxxxxx"
 
     @classmethod
     def generate_image(cls, *, prompt: str, save_path: str, max_width: int = 800, max_height: int = 600, **kwargs) -> Tuple[str, Tuple[int, int]]:
