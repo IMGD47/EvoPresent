@@ -64,7 +64,9 @@ CUDA_VISIBLE_DEVICES=1 python3 -m evopresent.ppt.ppt_gen_pipeline \
   --scholar=on \   # You can toggle it to control speed.
   --checker-scope=images \   # all/images/text/
   --html-model gemini-2.5-pro \   
-  --checker-model gpt-4o
+  --checker-model gpt-4o  \
+  --checker-threshold 8.7 \   
+  --checker-max-attempts 3 
 ```
 
 ## 🎥 Presentation Video Generation
