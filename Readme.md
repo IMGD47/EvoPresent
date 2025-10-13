@@ -7,7 +7,7 @@
 - [X] Thanks QbitAI (量子位) for sharing our project [[link]](https://mp.weixin.qq.com/s/_UvfTWG2Ub03XWDL7KchgA)! 🎉
 - [X] Official release of our paper and demo! 🎉
 - [X] Training setup and the aesthetic model have been made available.
-- [ ] Launch of the self-improvement aesthetic agent this week.
+- [X] Launch of the self-improvement aesthetic agent this week.
   
 
  ## 🔥 Demo
@@ -50,6 +50,7 @@ export EVOP_CLAUDE_API_KEY=
 `checker-scope` controls the scope of the layout review: `all` (Check all slides), `images` (Check only slides with images/tables), `text` (Check only text-only slides).
 `style` specifies the presentation theme and visual style (such as color scheme, fonts, whitespace, animations, etc.). For example, `tech_dark` applies a dark, tech-style theme. 
 
+Templates in `Evopresent/evopresent/styles` offer various presentation styles. More style-based templates will be added soon for easier customization.
 ```bash
 CUDA_VISIBLE_DEVICES=1 python3 -m evopresent.ppt.ppt_gen_pipeline \
   --paper_path="/root/Code/Evopresent/paper_input/paper.pdf" \
