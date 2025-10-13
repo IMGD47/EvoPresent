@@ -111,6 +111,7 @@ We have released the evaluation dataset on huggingface. Due to potential copyrig
 We appreciate the releasing codes and data of [open-r1-multimodal](https://github.com/EvolvingLMMs-Lab/open-r1-multimodal), [Paper2Poster](https://github.com/Paper2Poster/Paper2Poster/) and [Float](https://github.com/deepbrainai-research/float), [MegaTTS3](https://github.com/bytedance/MegaTTS3)  .
 
 ## Citation
+Please kindly cite our paper if you find this project helpful.
 
 ```bibtex
 @misc{liu2025presentingpaperartselfimprovement,
