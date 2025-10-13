@@ -4,10 +4,11 @@
     
 
  ## 💡 Update
+- Thanks QbitAI (量子位) for sharing our project [[link]](https://mp.weixin.qq.com/s/_UvfTWG2Ub03XWDL7KchgA)! 🎉
 - [X] Official release of our paper and demo! 🎉
 - [X] Training setup has been made available. The aesthetic model weights will be released this week.
 - [ ] Launch of the self-improvement aesthetic agent this week.
-- [ ] Thanks QbitAI (量子位) for sharing our project [[link]](https://mp.weixin.qq.com/s/_UvfTWG2Ub03XWDL7KchgA)! 🎉
+  
 
  ## 🔥 Demo
 
