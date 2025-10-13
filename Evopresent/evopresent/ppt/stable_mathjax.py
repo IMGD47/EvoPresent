@@ -1,15 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
-"""
-Stable MathJax rendering helpers to ensure consistent equation rendering.
-"""
-
 import re
 import hashlib
 from bs4 import BeautifulSoup
 from typing import Dict, Any, Optional, List
-
 
 class StableMathJaxRenderer:
     """Ensure consistent and reliable MathJax rendering with validation and fallback."""
