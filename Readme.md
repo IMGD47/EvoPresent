@@ -15,6 +15,13 @@
 
 Check out more at [🎨 project web](https://evopresent.github.io/).
 
+
+## 🚀  EvoPresent Agent Generation Pipeline
+
+![Pipeline](asset/pipeline.png)
+
+Overview of the EvoPresent framework. (a) EvoPresent first performs content extraction and voice generation, then constructs the storyline and script, followed by content enhancement using image generation and knowledge retrieval. Design and rendering are handled next, and the aesthetic checker evaluates the initial slide and provides adjustments. (b) PresAesth is trained on a human-preference aesthetic dataset via multiple tasks (scoring, defect adjustment, and comparison). (c) The PresAesth model guides the agent framework in iterative self-improvement.
+
 ## 🛠️ Environment
 ```bash
 pip install -r requirements.txt
@@ -26,12 +33,6 @@ Create a `.env` file in the project root and add your OpenAI API key:
 OPENAI_API_KEY=<your_openai_api_key>
 ```
 
-
-## 🚀  EvoPresent Agent Pipeline
-
-![Pipeline](asset/pipeline.png)
-
-Overview of the EvoPresent framework. (a) EvoPresent first performs content extraction and voice generation, then constructs the storyline and script, followed by content enhancement using image generation and knowledge retrieval. Design and rendering are handled next, and the aesthetic checker evaluates the initial slide and provides adjustments. (b) PresAesth is trained on a human-preference aesthetic dataset via multiple tasks (scoring, defect adjustment, and comparison). (c) The PresAesth model guides the agent framework in iterative self-improvement.
 
 ## 🏋️‍♂️ Training
 
