@@ -48,10 +48,12 @@ export EVOP_CLAUDE_API_KEY=
 ```
 
 ## ⚡ Quick Inference
+-  Create a folder named `{paper_name}` under `{dataset_dir}`, and place your paper inside it as a PDF file named `paper.pdf`.
 - `checker-scope` controls the scope of the layout review: `all` (Check all slides), `images` (Check only slides with images/tables), `text` (Check only text-only slides).
 `style` specifies the presentation theme and visual style (such as color scheme, fonts, whitespace, animations, etc.). For example, `tech_dark` applies a dark, tech-style theme. 
 
 - Templates in `Evopresent/evopresent/styles` offer various presentation styles. More style-based templates will be added soon for easier customization.
+- 
 ```bash
 CUDA_VISIBLE_DEVICES=1 python3 -m evopresent.ppt.ppt_gen_pipeline \
   --paper_path="/root/Code/Evopresent/paper_input/paper.pdf" \
