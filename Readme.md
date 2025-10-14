@@ -133,8 +133,6 @@ python3 -m video_generation.full_pipeline \
 
 This section contains the training infrastructure for the **PresAesth** model, which is based on [Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) and fine-tuned for presentation aesthetics evaluation tasks.
 
-We have released the evaluation dataset on huggingface. Due to potential copyright restrictions, the images cannot be redistributed directly. However, they can be accessed via the links provided in the metadata.
-
 1. **Environment Setup**
    ```bash
    # install uv first
@@ -163,6 +161,8 @@ We have released the evaluation dataset on huggingface. Due to potential copyrig
 
 ## 📊 EvoPresent Benchmark
 ![data](asset/data.jpg)
+
+We have released the evaluation dataset on huggingface. Due to potential copyright restrictions, the images cannot be redistributed directly. However, they can be accessed via the links provided in the metadata.
 
 ## 🎨 Aesthetic Comparison
 
