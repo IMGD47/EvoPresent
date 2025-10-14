@@ -113,9 +113,7 @@ python3 -m video_generation.full_pipeline \
 
 - **Text-to-Speech (TTS) Options**:
 
-  For generating audio in your video pipeline, you have two main TTS options:
-
-  1. **OpenAI TTS**:
+ 1. **OpenAI TTS**:
      - **Recommendation**: If speed is your priority, OpenAI's TTS service is recommended.
      - **Note**: Voice selection is somewhat limited. Please refer to OpenAI's official documentation for detailed options.
 
