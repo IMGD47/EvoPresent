@@ -74,7 +74,9 @@ CUDA_VISIBLE_DEVICES=1 python3 -m evopresent.ppt.ppt_gen_pipeline \
 ## 🎥 Presentation Video Generation
 
 - **Environment**
+  
 ``` pip install -r openai_requirements.txt
+
     pip install -r mega_requirements.txt
 ```
 
