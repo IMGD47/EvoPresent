@@ -76,11 +76,10 @@ CUDA_VISIBLE_DEVICES=1 python3 -m evopresent.ppt.ppt_gen_pipeline \
 - **Environment**
   
 ```
-pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118
-pip install -r generation_requirements.txt
+pip install -r Evopresent/generation_requirements.txt
 ```
-For more setup instructions, refer to the [FLOAT](https://github.com/deepbrainai-research/float/tree/main).
-
+For more setup instructions, refer to the [FLOAT](https://github.com/deepbrainai-research/float/tree/main) and [MegaTTS3](https://github.com/bytedance/MegaTTS3).
+ 
 - **Input & Output Directories**:
   - `--html-dir`: Specifies the directory containing HTML files for the presentation.
   - `--script-json`: Points to a JSON file containing scripts for each slide.
@@ -170,7 +169,7 @@ We have released the evaluation dataset on huggingface. Due to potential copyrig
 ![data](asset/compare.jpg)
 
 ## Acknowledgement
-We appreciate the releasing codes and data of [open-r1-multimodal](https://github.com/EvolvingLMMs-Lab/open-r1-multimodal), [Paper2Poster](https://github.com/Paper2Poster/Paper2Poster/) and [Float](https://github.com/deepbrainai-research/float), [MegaTTS3](https://github.com/bytedance/MegaTTS3)  .
+We appreciate the releasing codes and data of [open-r1-multimodal](https://github.com/EvolvingLMMs-Lab/open-r1-multimodal), [Paper2Poster](https://github.com/Paper2Poster/Paper2Poster/) and [Float](https://github.com/deepbrainai-research/float), [MegaTTS3](https://github.com/bytedance/MegaTTS3).
 
 ## Citation
 Please kindly cite our paper if you find this project helpful.
