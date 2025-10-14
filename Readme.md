@@ -90,6 +90,7 @@ CUDA_VISIBLE_DEVICES=1 python3 -m evopresent.ppt.ppt_gen_pipeline \
  - **Video Parameters**:
    - `--frame-width` & `--frame-height`: Define the dimensions of each slide in the video.
    - `--margin-x` & `--margin-y`: Set the margins for face placement within the video frames.
+
    
 ```
 python3 -m video_generation.full_pipeline \  
