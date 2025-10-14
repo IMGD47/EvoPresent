@@ -90,7 +90,7 @@ CUDA_VISIBLE_DEVICES=1 python3 -m evopresent.ppt.ppt_gen_pipeline \
  - **Video Parameters**:
    - `--frame-width` & `--frame-height`: Define the dimensions of each slide in the video.
    - `--margin-x` & `--margin-y`: Set the margins for face placement within the video frames.
-
+   
 ```
 python3 -m video_generation.full_pipeline \  
   --html-dir path_to_html_dir \             # slides
@@ -110,6 +110,16 @@ python3 -m video_generation.full_pipeline \
   --margin-x 100  \              # Horizontal margin for face placement
   --margin-y 100   \           # Vertical margin for face placement
 ```
+## Text-to-Speech (TTS) Options
+
+For generating audio in your video pipeline, you have two main TTS options:
+### 1. OpenAI TTS
+- **Recommendation**: If speed is your priority, we recommend using OpenAI's TTS service.
+- **Note**: The voice selection with OpenAI is somewhat limited. For detailed options, please refer to the official OpenAI documentation.
+
+### 2. Personalized Voice with MegaTTS3
+- **Voice Cloning**: If you want to use your own voice, consider the [MegaTTS3 Voice Cloning](https://huggingface.co/spaces/mrfakename/MegaTTS3-Voice-Cloning) space available on Hugging Face.
+- **Preset Voices**: MegaTTS3 offers a few preset voices for use. Explore the available voices in the [Google Drive folder](https://drive.google.com/drive/folders/1QhcHWcy20JfqWjgqZX1YM3I6i9u4oNlr).
 
 ## 🏋️‍♂️ PresAesth Training
 
