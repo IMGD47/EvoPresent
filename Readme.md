@@ -72,7 +72,25 @@ CUDA_VISIBLE_DEVICES=1 python3 -m evopresent.ppt.ppt_gen_pipeline \
 ```
 
 ## 🎥 Presentation Video Generation
-
+```
+python3 -m video_generation.full_pipeline \  
+  --html-dir path_to_html_dir \             # slides
+  --script-json path_to_script_json \       # script
+  --ref-face path_to_ref_face_image \      
+  --ckpt-path path_to_checkpoint \          # Path to the float.pth 
+  --output-dir output_directory \          
+  --final-video path_to_final_video \     
+  --wav2vec-model-path path_to_wav2vec_model \ # Path to the wav2vec2-base-960h
+  --tts-backend  openai  \        #   megatts3/openai
+  --voice-wav /root/video_generation/MegaTTS3/assets/English_prompt.wav \    # Reference WAV file if you choose megatts3
+  --openai-api-key  sk....  # Parameters to select voice and speed if you choose openai
+  --openai-voice ash \
+  --openai-speed 1.3  \
+  --frame-width 1920 \        # Width of each slide in the video
+  --frame-height 1080  \      # Height of each frame in the video
+  --margin-x 100  \              # Horizontal margin for face placement
+  --margin-y 100   \           # Vertical margin for face placement
+```
 
 ## 🏋️‍♂️ PresAesth Training
 
