@@ -45,11 +45,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--no-crop-face", action="store_true", help="Don't crop face")
 
     parser.add_argument("--face-gpu", help="CUDA device id(s) for face generation")
-    parser.add_argument("--tts-concurrency", type=int, default=4, help="Max concurrent TTS tasks")
+    parser.add_argument("--tts-concurrency", type=int, default=1, help="Max concurrent TTS tasks")
     parser.add_argument("--face-concurrency", type=int, help="(Unused) Max concurrent face gen tasks; kept for API parity")
     parser.add_argument("--ffmpeg-cmd", default="ffmpeg", help="FFmpeg command path (assumes it's in the system's PATH)")
 
-    parser.add_argument("--face-scale", type=float, default=0.25, help="Face video scale ratio (0.25 = 25% of background width)")
+    parser.add_argument("--face-scale", type=float, default=1.0, help="Face video scale ratio (0.25 = 25% of background width)")
     parser.add_argument("--margin-x", type=int, default=30, help="Right margin in pixels")
     parser.add_argument("--margin-y", type=int, default=30, help="Bottom margin in pixels")
     parser.add_argument("--pad-ratio-w", type=float, default=0.0, help="Extra width ratio to pad canvas")
