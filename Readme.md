@@ -119,7 +119,7 @@ python3 -m video_generation.full_pipeline \
   --margin-y 100   \           # Vertical margin for face placement
 ```
 
-- **Text-to-Speech (TTS) Options**:
+- **Presentation Generation Options**:
 
  1. **OpenAI TTS**:
      - **Recommendation**: If speed is your priority, OpenAI's TTS service is recommended.
