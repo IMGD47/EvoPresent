@@ -53,7 +53,7 @@ export EVOP_CLAUDE_API_KEY=
 `style` specifies the presentation theme and visual style (such as color scheme, fonts, whitespace, animations, etc.). For example, `tech_dark` applies a dark, tech-style theme. 
 
 - Templates in `Evopresent/evopresent/styles` offer various presentation styles. More style-based templates will be added soon for easier customization.
-- 
+  
 ```bash
 CUDA_VISIBLE_DEVICES=1 python3 -m evopresent.ppt.ppt_gen_pipeline \
   --paper_path="/root/Code/Evopresent/paper_input/paper.pdf" \
@@ -72,6 +72,25 @@ CUDA_VISIBLE_DEVICES=1 python3 -m evopresent.ppt.ppt_gen_pipeline \
 ```
 
 ## 🎥 Presentation Video Generation
+
+- **Input & Output Directories**:
+  - `--html-dir`: Specifies the directory containing HTML files for the presentation.
+  - `--script-json`: Points to a JSON file containing scripts for each slide.
+  - `--ref-face`: Path to the reference face image for generating facial animations.
+  - `--ckpt-path`: Specifies the model weights file for loading (e.g., `float.pth`).
+  - `--output-dir`: Directory where output files like audio and videos will be stored.
+  - `--final-video`: Path for saving the final composed video.
+    
+- **Text-to-Speech (TTS) Configuration**:
+  - `--tts-backend`: Enables selection between `megatts3` or OpenAI for text-to-speech processing.
+  - `--openai-api-key`: API key required if using OpenAI for TTS.
+  - `--openai-voice` & `--openai-speed`: Voice selection and speed parameters for OpenAI TTS.
+  - `--voice-wav`: Used as a reference WAV file when choosing `megatts3` backend for TTS.
+    
+ - **Video Parameters**:
+  - `--frame-width` & `--frame-height`: Define the dimensions of each slide in the video.
+  - `--margin-x` & `--margin-y`: Set the margins for face placement within the video frames.
+
 ```
 python3 -m video_generation.full_pipeline \  
   --html-dir path_to_html_dir \             # slides
