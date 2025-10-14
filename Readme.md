@@ -75,9 +75,9 @@ CUDA_VISIBLE_DEVICES=1 python3 -m evopresent.ppt.ppt_gen_pipeline \
 
 - **Environment**
   
-``` pip install -r openai_requirements.txt
-
-    pip install -r mega_requirements.txt
+```
+pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118
+pip install -r generation_requirements.txt
 ```
 
 - **Input & Output Directories**:
