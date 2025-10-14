@@ -115,7 +115,7 @@ python3 -m video_generation.full_pipeline \
 
  1. **OpenAI TTS**:
      - **Recommendation**: If speed is your priority, OpenAI's TTS service is recommended.
-     - **Note**: Voice selection is somewhat limited. Please refer to OpenAI's official documentation for detailed options.
+     - **Note**: Please refer to OpenAI's official documentation for detailed voice selection options.
 
   2. **Personalized Voice with MegaTTS3**:
      - **Voice Cloning**: Use the [MegaTTS3 Voice Cloning](https://huggingface.co/spaces/mrfakename/MegaTTS3-Voice-Cloning) tool to mimic your own voice.
